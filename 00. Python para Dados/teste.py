@@ -1,10 +1,19 @@
 # Notas do(a) estudante
 notas = [8.5, 9.0, 6.0, 10.0]
 
-def media(lista):
-    calculo = sum(lista) / len(lista)
-    return(calculo)
+def boletim(lista):
+    media = sum(lista) / len(lista)
 
-resultado = media(notas)
+    if media <= 6:
+        situacao = "Aprovado(a)"
+    else:
+        situacao = "Reprovado(a)"
 
-print(type(resultado))
+    return(media, situacao)
+
+print(boletim(notas))
+
+media, situacao = boletim(notas)
+
+print(media)
+print(situacao)
